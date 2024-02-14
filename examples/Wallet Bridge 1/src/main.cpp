@@ -176,6 +176,7 @@ std::string handleTCPAPI(APIReturn *apiReturn)
   }
 }
 
+// resetChallenge(): Aim is to generate a random challenge value, convert it to hexadecimal, and append it to the global challenge string.
 void resetChallenge()
 {
   char buffer[32];
@@ -184,6 +185,7 @@ void resetChallenge()
   challenge += itoa(challengeVal, buffer, 16);
 }
 
+// blink(): Aim is to toggle the state of a blue LED and print its state to the serial monitor.
 void blink()
 {
   digitalWrite(BLUE_LED, blinkLEDOn);
